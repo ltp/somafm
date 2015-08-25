@@ -64,9 +64,9 @@ if ( $res->is_success ) {
 
 	print "Bye.\n" and exit if ( $station == 0 );
 	my @urls = sort keys %stations;
-	print "url is $urls[ $station ]\n";
+	#print "url is $urls[ $station - 1 ]\n";
 
-	system "mplayer http://ice.somafm.com/$urls[ $station ]";
+	system "mplayer http://ice.somafm.com/$urls[ $station -1 ]";
 }
 else {
 	print "Unable to retrieve playlist: " . $res->status_line . "\n";
